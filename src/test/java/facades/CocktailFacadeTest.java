@@ -38,9 +38,9 @@ class CocktailFacadeTest {
         try {
             em.getTransaction().begin();
             em.createNamedQuery("MeasurementsIngredients.deleteAllRows").executeUpdate();
-            em.createNativeQuery("ALTER TABLE MeasurementsIngredients AUTO_INCREMENT = 1").executeUpdate();
+            em.createNativeQuery("ALTER TABLE measurementsIngredients AUTO_INCREMENT = 1").executeUpdate();
             em.createNamedQuery("Cocktail.deleteAllRows").executeUpdate();
-            em.createNativeQuery("ALTER TABLE Cocktail AUTO_INCREMENT = 1").executeUpdate();
+            em.createNativeQuery("ALTER TABLE cocktail AUTO_INCREMENT = 1").executeUpdate();
             em.getTransaction().commit();
 
             em.getTransaction().begin();

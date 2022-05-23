@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 @Entity
 @NamedQuery(name = "MeasurementsIngredients.deleteAllRows", query = "DELETE from MeasurementsIngredients mi")
-@Table(name = "MeasurementsIngredients")
+@Table(name = "measurementsIngredients")
 public class MeasurementsIngredients implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -20,7 +20,7 @@ public class MeasurementsIngredients implements Serializable {
     private String measurementIngredient;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "Cocktail_id", referencedColumnName = "id", nullable = false)
+    @JoinColumn(name = "cocktail_id", referencedColumnName = "id", nullable = false)
     private Cocktail cocktail;
 
     public MeasurementsIngredients() {

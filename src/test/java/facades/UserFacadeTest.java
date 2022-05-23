@@ -94,7 +94,7 @@ class UserFacadeTest {
     This tests the function adds a user to our database when it is given wrong info
     the function being tested is in src\test\java\facades\UserFacadeTest.java
     */
-    @Test
+   @Test
     void signUpTestFail() {
         User actual = facade.signUp("testinghihi", "testingThis");
         User expected = new User("testing", "testingThis");
